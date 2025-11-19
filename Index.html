@@ -56,6 +56,36 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Cards de região - garantir quadrados e responsividade */
+        .regiao-card {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 !important;
+        }
+
+        /* Ajuste para mobile */
+        @media (max-width: 640px) {
+            .regiao-card {
+                min-height: 100px;
+                padding: 1rem;
+            }
+            
+            .regiao-card i {
+                font-size: 1.25rem !important;
+            }
+            
+            .regiao-card p {
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Garantir que o ícone também mude de cor no hover */
+        .regiao-card:hover i {
+            color: inherit;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -109,7 +139,7 @@
                 Conserto de Máquinas de Costura em São Paulo
             </h1>
             <p class="text-xl md:text-2xl mb-8 font-light">
-                Orçamento em Domicílio Sem Compromisso. Atendimento Especializado.
+                Visita Técnica Gratuita para Orçamento.<br>Atendimento Especializado.
             </p>
             <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica" target="_blank" class="inline-block bg-brand-red text-white px-10 py-5 text-lg font-bold hover:bg-white hover:text-brand-red transition-colors-smooth">
                 Agendar Visita via WhatsApp
@@ -171,7 +201,7 @@
     <section id="servicos" class="bg-gray-50 py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
-                Principais Problemas que Resolvemos
+                Nossa Carta de Serviços
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
@@ -232,39 +262,7 @@
             </div>
         </div>
     </section>
-
-    <!-- SEÇÃO SOBRE NÓS -->
-    <section id="sobre" class="bg-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto -->
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
-                        Desde 2001 consertando histórias...
-                    </h2>
-                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
-                        A Costura SP nasceu da paixão do Sr. Eduardo, que aprendeu o ofício com seu pai ainda na década de 80. O que começou como um pequeno balcão de consertos se transformou em referência em São Paulo.
-                    </p>
-                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
-                        Com mais de 20 anos de experiência, nossa equipe técnica é treinada constantemente nas tecnologias mais recentes, sem perder a atenção aos detalhes que só a experiência traz.
-                    </p>
-                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
-                        Atendemos desde costureiras profissionais até pequenas confecções, sempre com o mesmo compromisso: devolver sua máquina funcionando perfeitamente.
-                    </p>
-                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20conhecer%20melhor%20o%20trabalho%20de%20vocês" target="_blank" class="inline-block bg-brand-red text-white px-8 py-4 font-bold hover:bg-black transition-colors-smooth">
-                        Fale Conosco
-                    </a>
-                </div>
-                
-                <!-- Imagem -->
-                <div>
-                    <img src="https://source.unsplash.com/800x600/?sewing-workshop,organized" alt="Oficina Costura SP" class="w-full h-[500px] object-cover shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO DEPOIMENTOS -->
+        <!-- SEÇÃO DEPOIMENTOS -->
     <section class="bg-gray-50 py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
@@ -317,6 +315,135 @@
                     </p>
                     <p class="font-bold text-black">Ana Paula</p>
                     <p class="text-sm text-gray-500">Designer de Moda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO ÁREA DE ATENDIMENTO -->
+    <section id="area-atendimento" class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <!-- Título -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-black">
+                Regiões que Atendemos
+            </h2>
+            
+            <!-- Disclaimer -->
+            <div class="max-w-3xl mx-auto mb-12">
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-yellow-600 text-xl mr-3 mt-1"></i>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            <strong>Importante:</strong> Atendimento em domicílio sujeito à consulta de disponibilidade para o seu CEP. Entre em contato para confirmar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grupo 1: Grande São Paulo -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6 text-black">
+                    Grande São Paulo
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Barueri</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Osasco</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Carapicuíba</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Santana de Parnaíba</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Cotia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grupo 2: São Paulo Capital - Zonas -->
+            <div>
+                <h3 class="text-2xl font-bold text-center mb-6 text-black">
+                    São Paulo Capital
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-building text-2xl mb-2"></i>
+                        <p class="font-bold">Centro</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-compass text-2xl mb-2"></i>
+                        <p class="font-bold">Zona Norte</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-compass text-2xl mb-2"></i>
+                        <p class="font-bold">Zona Sul</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-compass text-2xl mb-2"></i>
+                        <p class="font-bold">Zona Leste</p>
+                    </div>
+                    
+                    <div class="regiao-card bg-white border-2 border-gray-300 p-6 text-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors-smooth cursor-pointer">
+                        <i class="fas fa-compass text-2xl mb-2"></i>
+                        <p class="font-bold">Zona Oeste</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Final -->
+            <div class="text-center mt-12">
+                <p class="text-gray-700 mb-6 text-lg">
+                    Não encontrou sua região? Entre em contato e consulte!
+                </p>
+                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20verificar%20se%20atendem%20na%20minha%20região" target="_blank" class="inline-block bg-brand-red text-white px-10 py-4 font-bold hover:bg-black transition-colors-smooth">
+                    <i class="fab fa-whatsapp mr-2"></i>Consultar Atendimento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
+                        Desde 2001 consertando histórias...
+                    </h2>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        A Costura SP nasceu da paixão do Sr. Eduardo, que aprendeu o ofício com seu pai ainda na década de 80. O que começou como um pequeno balcão de consertos se transformou em referência em São Paulo.
+                    </p>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        Com mais de 20 anos de experiência, nossa equipe técnica é treinada constantemente nas tecnologias mais recentes, sem perder a atenção aos detalhes que só a experiência traz.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        Atendemos desde costureiras profissionais até pequenas confecções, sempre com o mesmo compromisso: devolver sua máquina funcionando perfeitamente.
+                    </p>
+                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20conhecer%20melhor%20o%20trabalho%20de%20vocês" target="_blank" class="inline-block bg-brand-red text-white px-8 py-4 font-bold hover:bg-black transition-colors-smooth">
+                        Fale Conosco
+                    </a>
+                </div>
+                
+                <!-- Imagem -->
+                <div>
+                    <img src="https://source.unsplash.com/800x600/?sewing-workshop,organized" alt="Oficina Costura SP" class="w-full h-[500px] object-cover shadow-lg">
                 </div>
             </div>
         </div>
@@ -554,17 +681,15 @@
                 }
             });
         });
-        
-        // Animação do botão flutuante WhatsApp (pulsar sutil)
-        const whatsappBtn = document.querySelector('a[href*="wa.me"]');
-        if (whatsappBtn) {
-            setInterval(() => {
-                whatsappBtn.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    whatsappBtn.style.transform = 'scale(1)';
-                }, 200);
-            }, 3000);
-        }
+
+        // Interação com cards de região
+        document.querySelectorAll('.regiao-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const regiao = this.querySelector('p').textContent;
+                const mensagem = `Olá! Gostaria de confirmar se atendem na região: ${encodeURIComponent(regiao)}`;
+                window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
+            });
+        });
     </script>
 
 </body>
