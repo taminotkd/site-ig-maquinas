@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conserto de Máquinas de Costura em São Paulo | Costura SP</title>
+    <meta name="description" content="Conserto especializado de máquinas de costura em SP. 20+ anos de experiência. Orçamento em domicílio sem compromisso. Atendemos todas as marcas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#a42f22',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Remove border-radius globalmente */
+        button, .btn, .card, input, textarea {
+            border-radius: 0 !important;
+        }
+        
+        /* Transições suaves apenas em hover */
+        .transition-colors-smooth {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Overlay para hero */
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-black">
+                    Costura <span class="text-brand-red">SP</span>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Início</a>
+                    <a href="#marcas" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Marcas</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Serviços</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Sobre</a>
+                    <a href="#contato" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Contato</a>
+                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20conserto" target="_blank" class="bg-brand-red text-white px-6 py-3 hover:bg-black transition-colors-smooth font-semibold">
+                        <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-black">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#inicio" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Início</a>
+                <a href="#marcas" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Marcas</a>
+                <a href="#servicos" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Serviços</a>
+                <a href="#sobre" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Sobre</a>
+                <a href="#contato" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Contato</a>
+                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20conserto" target="_blank" class="block bg-brand-red text-white px-6 py-3 hover:bg-black transition-colors-smooth font-semibold text-center">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative h-[600px] md:h-[700px] flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?sewing-machine,workshop'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Conserto de Máquinas de Costura em São Paulo
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">
+                Orçamento em Domicílio Sem Compromisso. Atendimento Especializado.
+            </p>
+            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica" target="_blank" class="inline-block bg-brand-red text-white px-10 py-5 text-lg font-bold hover:bg-white hover:text-brand-red transition-colors-smooth">
+                Agendar Visita via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- BARRA DE CONFIANÇA -->
+    <section class="bg-black py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+                <div>
+                    <i class="fas fa-award text-3xl mb-3 text-brand-red"></i>
+                    <p class="text-sm font-semibold">20+ Anos de<br>Experiência</p>
+                </div>
+                <div>
+                    <i class="fas fa-certificate text-3xl mb-3 text-brand-red"></i>
+                    <p class="text-sm font-semibold">Técnicos<br>Certificados</p>
+                </div>
+                <div>
+                    <i class="fas fa-credit-card text-3xl mb-3 text-brand-red"></i>
+                    <p class="text-sm font-semibold">Aceitamos<br>Cartão</p>
+                </div>
+                <div>
+                    <i class="fas fa-star text-3xl mb-3 text-brand-red"></i>
+                    <p class="text-sm font-semibold">Nota 5.0 no<br>Google</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE MARCAS -->
+    <section id="marcas" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+                Somos especialistas nas principais marcas
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
+                    <span class="text-2xl font-bold text-gray-600">SINGER</span>
+                </div>
+                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
+                    <span class="text-2xl font-bold text-gray-600">BROTHER</span>
+                </div>
+                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
+                    <span class="text-2xl font-bold text-gray-600">ELGIN</span>
+                </div>
+                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
+                    <span class="text-2xl font-bold text-gray-600">JANOME</span>
+                </div>
+                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
+                    <span class="text-2xl font-bold text-gray-600">SIRUBA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE SERVIÇOS -->
+    <section id="servicos" class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+                Principais Problemas que Resolvemos
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-lock text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Máquina Travada</h3>
+                    <p class="text-gray-600">Destravamento e lubrificação completa do mecanismo interno.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-exclamation-triangle text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Ponto Falhando</h3>
+                    <p class="text-gray-600">Regulagem de tensão, troca de agulha e ajuste do timing.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-broom text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Limpeza Geral</h3>
+                    <p class="text-gray-600">Limpeza profunda, remoção de resíduos e revisão completa.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-cog text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Troca de Peças</h3>
+                    <p class="text-gray-600">Peças originais e compatíveis com garantia de qualidade.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-volume-mute text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Barulho Excessivo</h3>
+                    <p class="text-gray-600">Identificação de peças desgastadas e substituição.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-bolt text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Problemas Elétricos</h3>
+                    <p class="text-gray-600">Conserto de motor, pedal e parte elétrica em geral.</p>
+                </div>
+                
+                <!-- Card 7 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-cut text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Linha Arrebentando</h3>
+                    <p class="text-gray-600">Ajuste fino de tensão superior e inferior da linha.</p>
+                </div>
+                
+                <!-- Card 8 -->
+                <div class="bg-white p-8 shadow-md hover:shadow-xl transition-shadow">
+                    <i class="fas fa-tools text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-black">Manutenção Preventiva</h3>
+                    <p class="text-gray-600">Check-up completo para evitar problemas futuros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
+                        Desde 2001 consertando histórias...
+                    </h2>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        A Costura SP nasceu da paixão do Sr. Eduardo, que aprendeu o ofício com seu pai ainda na década de 80. O que começou como um pequeno balcão de consertos se transformou em referência em São Paulo.
+                    </p>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        Com mais de 20 anos de experiência, nossa equipe técnica é treinada constantemente nas tecnologias mais recentes, sem perder a atenção aos detalhes que só a experiência traz.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                        Atendemos desde costureiras profissionais até pequenas confecções, sempre com o mesmo compromisso: devolver sua máquina funcionando perfeitamente.
+                    </p>
+                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20conhecer%20melhor%20o%20trabalho%20de%20vocês" target="_blank" class="inline-block bg-brand-red text-white px-8 py-4 font-bold hover:bg-black transition-colors-smooth">
+                        Fale Conosco
+                    </a>
+                </div>
+                
+                <!-- Imagem -->
+                <div>
+                    <img src="https://source.unsplash.com/800x600/?sewing-workshop,organized" alt="Oficina Costura SP" class="w-full h-[500px] object-cover shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+                O que nossos clientes dizem
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">
+                        "Minha Singer estava parada há 3 anos. O Eduardo foi até minha casa, fez o orçamento e no dia seguinte já estava consertada. Profissionalismo total!"
+                    </p>
+                    <p class="font-bold text-black">Maria Silva</p>
+                    <p class="text-sm text-gray-500">Costureira Autônoma</p>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">
+                        "Atendimento rápido e preço justo. Consertaram 3 máquinas da minha confecção. Agora são meus técnicos de confiança!"
+                    </p>
+                    <p class="font-bold text-black">João Oliveira</p>
+                    <p class="text-sm text-gray-500">Dono de Confecção</p>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 shadow-md">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">
+                        "Excelente trabalho! Minha Brother voltou a funcionar como nova. Super recomendo!"
+                    </p>
+                    <p class="font-bold text-black">Ana Paula</p>
+                    <p class="text-sm text-gray-500">Designer de Moda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CTA FINAL -->
+    <section class="bg-black py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Sua máquina de costura merece os melhores cuidados
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Agende agora mesmo uma visita técnica sem compromisso. Orçamento gratuito!
+            </p>
+            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20visita%20técnica" target="_blank" class="inline-block bg-brand-red text-white px-12 py-5 text-lg font-bold hover:bg-white hover:text-brand-red transition-colors-smooth">
+                <i class="fab fa-whatsapp mr-2"></i>Agendar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+                Entre em Contato
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Informações -->
+                <div>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <i class="fas fa-map-marker-alt text-2xl text-brand-red mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Endereço</h3>
+                                <p class="text-gray-700">Rua das Costuras, 123<br>Bom Retiro, São Paulo - SP<br>CEP: 01234-567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <i class="fas fa-phone text-2xl text-brand-red mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Telefone</h3>
+                                <p class="text-gray-700">(11) 99999-9999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <i class="fas fa-envelope text-2xl text-brand-red mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">E-mail</h3>
+                                <p class="text-gray-700">contato@costurasp.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-2xl text-brand-red mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Horário de Atendimento</h3>
+                                <p class="text-gray-700">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulário -->
+                <div class="bg-gray-50 p-8">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nome Completo</label>
+                            <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 focus:border-brand-red focus:outline-none" placeholder="Seu nome">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Telefone/WhatsApp</label>
+                            <input type="tel" required class="w-full px-4 py-3 border-2 border-gray-300 focus:border-brand-red focus:outline-none" placeholder="(11) 99999-9999">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Marca da Máquina</label>
+                            <select class="w-full px-4 py-3 border-2 border-gray-300 focus:border-brand-red focus:outline-none">
+                                <option>Singer</option>
+                                <option>Brother</option>
+                                <option>Elgin</option>
+                                <option>Janome</option>
+                                <option>Siruba</option>
+                                <option>Outra</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Descreva o Problema</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 border-2 border-gray-300 focus:border-brand-red focus:outline-none" placeholder="Conte-nos o que está acontecendo com sua máquina..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-red text-white px-8 py-4 font-bold hover:bg-black transition-colors-smooth">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo e Descrição -->
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4">
+                        Costura <span class="text-brand-red">SP</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Especialistas em conserto de máquinas de costura em São Paulo. Atendimento profissional com mais de 20 anos de experiência.
+                    </p>
+                </div>
+                
+                <!-- Links Rápidos -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Início</a></li>
+                        <li><a href="#marcas" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Marcas</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Serviços</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Sobre</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Redes Sociais -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com" target="_blank" class="w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors-smooth">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors-smooth">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors-smooth">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Costura SP. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5511999999999?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20um%20orçamento" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-brand-red text-white flex items-center justify-center shadow-2xl hover:bg-black transition-colors-smooth z-50" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu mobile ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Formulário de Contato
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Pegar dados do formulário
+            const formData = new FormData(contactForm);
+            const nome = contactForm.querySelector('input[type="text"]').value;
+            const telefone = contactForm.querySelector('input[type="tel"]').value;
+            const marca = contactForm.querySelector('select').value;
+            const problema = contactForm.querySelector('textarea').value;
+            
+            // Criar mensagem para WhatsApp
+            const mensagem = `Olá! Vim do site.%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*Telefone:* ${encodeURIComponent(telefone)}%0A*Marca:* ${encodeURIComponent(marca)}%0A*Problema:* ${encodeURIComponent(problema)}`;
+            
+            // Redirecionar para WhatsApp
+            window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
+            
+            // Resetar formulário
+            contactForm.reset();
+            
+            // Mostrar mensagem de sucesso
+            alert('Redirecionando para o WhatsApp...');
+        });
+        
+        // Smooth scroll para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Adicionar classe ativa ao menu baseado no scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            navLinks.forEach(link => {
+                link.classList.remove('text-brand-red');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-brand-red');
+                }
+            });
+        });
+        
+        // Animação do botão flutuante WhatsApp (pulsar sutil)
+        const whatsappBtn = document.querySelector('a[href*="wa.me"]');
+        if (whatsappBtn) {
+            setInterval(() => {
+                whatsappBtn.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    whatsappBtn.style.transform = 'scale(1)';
+                }, 200);
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
