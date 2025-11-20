@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -9,82 +10,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
     
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-red': '#a42f22',
-                    },
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Remove border-radius globalmente */
-        button, .btn, .card, input, textarea {
-            border-radius: 0 !important;
-        }
-        
-        /* Transições suaves apenas em hover */
-        .transition-colors-smooth {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        /* Overlay para hero */
-        .hero-overlay {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-        }
-        
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Garantir que os marcadores quadrados sejam consistentes */
-        #area-atendimento ul li > div {
-            border-radius: 0 !important;
-        }
 
-        /* Hover sutil nos itens da lista */
-        #area-atendimento ul li {
-            transition: transform 0.2s ease;
-            padding: 0.5rem;
-            margin-left: -0.5rem;
-        }
-
-        #area-atendimento ul li:hover {
-            transform: translateX(5px);
-            background-color: #f8f8f8;
-        }
-
-        /* Responsividade - empilhar colunas no mobile */
-        @media (max-width: 768px) {
-            #area-atendimento .grid {
-                gap: 2rem;
-            }
-        }
-
-        /* Garantir que o disclaimer seja totalmente quadrado */
-        #area-atendimento .bg-amber-400 {
-            border-radius: 0 !important;
-        }
-    </style>
+ 
 </head>
 <body class="antialiased">
 
@@ -93,20 +27,18 @@
         <nav class="container mx-auto px-4 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <div class="text-2xl font-bold text-black">
-                    Costura <span class="text-brand-red">SP</span>
+                <div>
+                    <img src="./assets/ig-maq-logo.png" alt="Costura SP Logo" class="h-12 md:h-16">
                 </div>
                 
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex items-center space-x-8">
+                <!-- Menu Desktop - Centralizado -->
+                <div class="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
                     <a href="#inicio" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Início</a>
                     <a href="#marcas" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Marcas</a>
                     <a href="#servicos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Serviços</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Sobre</a>
+                    <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
                     <a href="#area-atendimento" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
-                    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20conserto" target="_blank" class="bg-brand-red text-white px-6 py-3 hover:bg-black transition-colors-smooth font-semibold">
-                        <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-                    </a>
+                    <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Sobre</a>
                 </div>
                 
                 <!-- Menu Mobile Button -->
@@ -120,17 +52,16 @@
                 <a href="#inicio" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Início</a>
                 <a href="#marcas" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Marcas</a>
                 <a href="#servicos" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Serviços</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
+                <a href="#area-atendimento" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
                 <a href="#sobre" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Sobre</a>
-                <a href="#contato" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Contato</a>
-                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20conserto" target="_blank" class="block bg-brand-red text-white px-6 py-3 hover:bg-black transition-colors-smooth font-semibold text-center">
-                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-                </a>
+
             </div>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="inicio" class="relative h-[600px] md:h-[700px] flex items-center justify-center" style="background-image: url('https://i.imgur.com/gxzAy2x.jpeg'); background-size: cover; background-position: center;">
+    <section id="inicio" class="relative h-[600px] md:h-[700px] flex items-center justify-center" style="background-image: url('./assets/hero-cover-1.jpeg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -170,27 +101,39 @@
     </section>
 
     <!-- SEÇÃO DE MARCAS -->
-    <section id="marcas" class="bg-gray-100 py-16">
+    <section id="marcas" class="bg-gray-100 pt-16 pb-6">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
                 Somos especialistas nas principais marcas
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
-                    <span class="text-2xl font-bold text-gray-600">SINGER</span>
+                <!-- Singer -->
+                <div class=" h-32 flex items-center justify-center p-4 hover:border-brand-red transition-colors-smooth">
+                    <img src="./assets/singer-logo.png" alt="Singer Logo" class="max-h-30 max-w-full object-contain">
                 </div>
-                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
-                    <span class="text-2xl font-bold text-gray-600">BROTHER</span>
+                
+                <!-- Brother -->
+                <div class=" h-32 flex items-center justify-center p-4 hover:border-brand-red transition-colors-smooth">
+                    <img src="./assets/brother-logo.png" alt="Brother Logo" class="max-h-20 max-w-full object-contain">
                 </div>
-                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
-                    <span class="text-2xl font-bold text-gray-600">ELGIN</span>
+                
+                <!-- Elgin -->
+                <div class="h-32 flex items-center justify-center p-4 hover:border-brand-red transition-colors-smooth">
+                    <img src="./assets/elgin-logo.png" alt="Elgin Logo" class="max-h-20 max-w-full object-contain">
                 </div>
-                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
-                    <span class="text-2xl font-bold text-gray-600">JANOME</span>
+                
+                <!-- Janome -->
+                <div class=" h-32 flex items-center justify-center p-4 hover:border-brand-red transition-colors-smooth">
+                    <img src="./assets/janome-logo.png" alt="Janome Logo" class="max-h-40 max-w-full object-contain">
                 </div>
-                <div class="bg-gray-100 h-32 flex items-center justify-center border-2 border-gray-200">
-                    <span class="text-2xl font-bold text-gray-600">SIRUBA</span>
+                
+                <!-- Vigorelli -->
+                <div class=" h-32 flex items-center justify-center p-4 hover:border-brand-red transition-colors-smooth">
+                    <img src="./assets/vigorelli-logo.png" alt="Vigorelli Logo" class="max-h-20 max-w-full object-contain">
                 </div>
+            </div>
+            <div class="mt-12">
+                <div class="h-1 bg-brand-red max-w-6xl mx-auto"></div>
             </div>
         </div>
     </section>
@@ -260,60 +203,121 @@
             </div>
         </div>
     </section>
-        <!-- SEÇÃO DEPOIMENTOS -->
-    <section class="bg-brand-red py-16">
+    
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <section id="depoimentos" class="bg-gray-100 py-16 border-b border-gray-200">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-                O que nossos clientes dizem
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Depoimento 1 -->
-                <div class="bg-white p-8 shadow-md">
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+                    O que dizem sobre nós
+                </h2>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="flex items-center mb-2">
+                        <span class="text-4xl font-bold text-gray-800 mr-2">5.0</span>
+                        <div class="flex text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    <p class="text-gray-700 mb-4 italic">
-                        "Minha Singer estava parada há 3 anos. O Eduardo foi até minha casa, fez o orçamento e no dia seguinte já estava consertada. Profissionalismo total!"
+                    <p class="text-gray-500 text-sm">Baseado em avaliações do Google</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-white p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-purple-600 text-white flex items-center justify-center font-bold text-lg rounded-full mr-3">
+                                M
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-900">Maria Silva</h4>
+                                <p class="text-xs text-gray-500">Local Guide · 12 avaliações</p>
+                            </div>
+                        </div>
+                        <img src="./assets/google-logo.png" alt="Google" class="w-5 h-5">
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-yellow-400 text-xs mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">uma semana atrás</span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "Minha Singer estava parada há 3 anos. O Eduardo foi até minha casa, fez o orçamento e no dia seguinte já estava consertada. Profissionalismo total! Recomendo de olhos fechados."
                     </p>
-                    <p class="font-bold text-black">Maria Silva</p>
-                    <p class="text-sm text-gray-500">Costureira Autônoma</p>
                 </div>
                 
-                <!-- Depoimento 2 -->
-                <div class="bg-white p-8 shadow-md">
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                <div class="bg-white p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-600 text-white flex items-center justify-center font-bold text-lg rounded-full mr-3">
+                                J
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-900">João Oliveira</h4>
+                                <p class="text-xs text-gray-500">Local Guide · 3 avaliações</p>
+                            </div>
+                        </div>
+                        <img src="./assets/google-logo.png" alt="Google" class="w-5 h-5">
                     </div>
-                    <p class="text-gray-700 mb-4 italic">
-                        "Atendimento rápido e preço justo. Consertaram 3 máquinas da minha confecção. Agora são meus técnicos de confiança!"
-                    </p>
-                    <p class="font-bold text-black">João Oliveira</p>
-                    <p class="text-sm text-gray-500">Dono de Confecção</p>
-                </div>
-                
-                <!-- Depoimento 3 -->
-                <div class="bg-white p-8 shadow-md">
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+                    
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-yellow-400 text-xs mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">um mês atrás</span>
                     </div>
-                    <p class="text-gray-700 mb-4 italic">
-                        "Excelente trabalho! Minha Brother voltou a funcionar como nova. Super recomendo!"
+
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "Atendimento rápido e preço justo. Consertaram 3 máquinas da minha confecção. A visita técnica gratuita ajuda muito a ter confiança no serviço. Agora são meus técnicos de confiança!"
                     </p>
-                    <p class="font-bold text-black">Ana Paula</p>
-                    <p class="text-sm text-gray-500">Designer de Moda</p>
                 </div>
+                <div class="bg-white p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-600 text-white flex items-center justify-center font-bold text-lg rounded-full mr-3">
+                                A
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-900">Ana Paula</h4>
+                                <p class="text-xs text-gray-500">2 avaliações</p>
+                            </div>
+                        </div>
+                        <img src="./assets/google-logo.png" alt="Google" class="w-5 h-5">
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-yellow-400 text-xs mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">2 meses atrás</span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "Excelente trabalho! Minha Brother voltou a funcionar como nova. O técnico explicou exatamente qual era o problema e como evitar que aconteça de novo. Super recomendo!"
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -336,23 +340,23 @@
                         <div class="w-full h-1 bg-brand-red mt-2"></div>
                     </h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Barueri</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Osasco</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Carapicuíba</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Santana de Parnaíba</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Cotia</span>
                         </li>
@@ -366,23 +370,23 @@
                         <div class="w-full h-1 bg-brand-red mt-2"></div>
                     </h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Centro</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Zona Norte</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Zona Sul</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Zona Leste</span>
                         </li>
-                        <li class="flex items-center text-gray-800 text-lg">
+                        <li class="flex items-center text-gray-800 text-lg cursor-pointer hover:bg-gray-200 p-2 rounded transition-colors">
                             <div class="w-3 h-3 bg-brand-red mr-4 flex-shrink-0"></div>
                             <span>Zona Oeste</span>
                         </li>
@@ -391,7 +395,7 @@
             </div>
             
                 <!-- Disclaimer - Abaixo das Listas (Versão Discreta) -->
-                <div class="max-w-4xl mx-auto mb-10">
+                <div class="max-w-4xl mx-auto mb-4">
                     <div class="bg-gray-100 p-4 border-l-2 border-gray-400">
                         <div class="flex items-start">
                             <i class="fas fa-info-circle text-gray-600 text-base mr-3 mt-0.5 flex-shrink-0"></i>
@@ -404,21 +408,17 @@
             
             <!-- CTA Final -->
             <div class="text-center">
-                <p class="text-gray-700 mb-6 text-lg">
-                    Não encontrou sua região na lista?
-                </p>
-                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20verificar%20se%20atendem%20na%20minha%20região" target="_blank" class="inline-block bg-brand-red text-white px-10 py-4 text-lg font-bold hover:bg-black transition-colors-smooth">
+                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20verificar%20se%20atendem%20na%20minha%20região" target="_blank" class="inline-block bg-brand-red text-white px-6 py-4 text-sm font-bold hover:bg-black transition-colors-smooth">
                     <i class="fab fa-whatsapp mr-2"></i>Consultar Disponibilidade
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE NÓS -->
-    <section id="sobre" class="bg-brand-red py-16">
+    <!-- Sobre nós -->
+    <section id="sobre" class="bg-brand-red py-2">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:min-h-[550px]">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
                         Desde 2001 consertando histórias...
@@ -437,9 +437,8 @@
                     </a>
                 </div>
                 
-                <!-- Imagem -->
-                <div>
-                    <img src="https://source.unsplash.com/800x600/?sewing-workshop,organized" alt="Oficina Costura SP" class="w-full h-[500px] object-cover shadow-lg">
+                <div class="flex flex-grow h-full items-stretch"> 
+                    <img src="./assets/time-ig-maq.png" alt="Oficina Costura SP" class="w-full h-full object-cover shadow-lg">
                 </div>
             </div>
         </div>
@@ -490,6 +489,7 @@
                         <li><a href="#inicio" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Início</a></li>
                         <li><a href="#marcas" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Marcas</a></li>
                         <li><a href="#servicos" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Serviços</a></li>
+                        <li><a href="#depoimentos" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Depoimentos</a></li>
                         <li><a href="#sobre" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Sobre</a></li>
                         <li><a href="#area-atendimento" class="text-gray-400 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a></li>
                     </ul>
@@ -517,7 +517,7 @@
     </footer>
 
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5511999999999?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20um%20orçamento" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-brand-red text-white flex items-center justify-center shadow-2xl hover:bg-black transition-colors-smooth z-50" title="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5511999999999?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20um%20orçamento" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110"> 
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -538,32 +538,7 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-        
-        // Formulário de Contato
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Pegar dados do formulário
-            const formData = new FormData(contactForm);
-            const nome = contactForm.querySelector('input[type="text"]').value;
-            const telefone = contactForm.querySelector('input[type="tel"]').value;
-            const marca = contactForm.querySelector('select').value;
-            const problema = contactForm.querySelector('textarea').value;
-            
-            // Criar mensagem para WhatsApp
-            const mensagem = `Olá! Vim do site.%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*Telefone:* ${encodeURIComponent(telefone)}%0A*Marca:* ${encodeURIComponent(marca)}%0A*Problema:* ${encodeURIComponent(problema)}`;
-            
-            // Redirecionar para WhatsApp
-            window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
-            
-            // Resetar formulário
-            contactForm.reset();
-            
-            // Mostrar mensagem de sucesso
-            alert('Redirecionando para o WhatsApp...');
-        });
+
         
         // Smooth scroll para navegação
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -601,13 +576,14 @@
             });
         });
 
-        // Tornar itens da lista clicáveis (opcional)
-        document.querySelectorAll('#area-atendimento ul li').forEach(item => {
-            item.style.cursor = 'pointer';
-            item.addEventListener('click', function() {
-                const regiao = this.querySelector('span').textContent;
-                const mensagem = `Olá! Gostaria de confirmar se atendem na região: ${encodeURIComponent(regiao)}`;
-                window.open(`https://wa.me/5511999999999?text=${mensagem}`, '_blank');
+        // Tornar itens da lista clicáveis - AGUARDAR DOM CARREGAR
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#area-atendimento ul li').forEach(item => {
+                item.addEventListener('click', function() {
+                    const regiao = this.querySelector('span').textContent;
+                    const mensagem = `Olá! Gostaria de confirmar se atendem na região: ${encodeURIComponent(regiao)}`;
+                    window.open(`https://wa.me/5511957778291?text=${mensagem}`, '_blank');
+                });
             });
         });
     </script>

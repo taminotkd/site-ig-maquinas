@@ -1,0 +1,72 @@
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        /* Seus estilos personalizados extras */
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        }
+
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* Cursor pointer para todos os elementos clicáveis */
+        a, button, [onclick], [role="button"] {
+            cursor: pointer;
+        }
+        
+        
+        /* Remove border-radius globalmente */
+        button, .btn, .card, input, textarea {
+            border-radius: 0 !important;
+        }
+        
+        /* Transições suaves apenas em hover */
+        .transition-colors-smooth {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Overlay para hero */
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Garantir que os marcadores quadrados sejam consistentes */
+        #area-atendimento ul li > div {
+            border-radius: 0 !important;
+        }
+
+        #area-atendimento ul li:hover span {
+            color: #a42f22;
+            font-weight: 600;
+        }
+
+        /* Responsividade - empilhar colunas no mobile */
+        @media (max-width: 768px) {
+            #area-atendimento .grid {
+                gap: 2rem;
+            }
+        }
+
+        /* Garantir que o disclaimer seja totalmente quadrado */
+        #area-atendimento .bg-amber-400 {
+            border-radius: 0 !important;
+        }
+        /* Aplicar Roboto Slab em todos os títulos */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        /* Correção para garantir scroll suave no HTML */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Permite que elementos com rounded-full fiquem redondos mesmo com o reset global */
+        .rounded-full {
+            border-radius: 9999px !important;
+        }
