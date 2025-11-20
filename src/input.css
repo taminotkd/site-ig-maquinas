@@ -70,3 +70,6 @@
         .rounded-full {
             border-radius: 9999px !important;
         }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }

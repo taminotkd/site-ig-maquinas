@@ -33,12 +33,12 @@
                 
                 <!-- Menu Desktop - Centralizado -->
                 <div class="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#inicio" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Início</a>
-                    <a href="#marcas" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Marcas</a>
-                    <a href="#servicos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Serviços</a>
-                    <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
-                    <a href="#area-atendimento" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Sobre</a>
+                    <a href="#inicio" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Início</a>
+                    <a href="#marcas" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Marcas</a>
+                    <a href="#servicos" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Serviços</a>
+                    <a href="#depoimentos" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
+                    <a href="#area-atendimento" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
+                    <a href="#sobre" class="font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Sobre</a>
                 </div>
                 
                 <!-- Menu Mobile Button -->
@@ -49,11 +49,11 @@
             
             <!-- Menu Mobile -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
-                <a href="#inicio" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Início</a>
-                <a href="#marcas" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Marcas</a>
-                <a href="#servicos" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Serviços</a>
-                <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
-                <a href="#area-atendimento" class="text-gray-700 hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
+                <a href="#inicio" class="block font-bold text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Início</a>
+                <a href="#marcas" class="block font-bold text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Marcas</a>
+                <a href="#servicos" class="block font-bold text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Serviços</a>
+                <a href="#depoimentos" class="block font-bold text-gray-700 hover:text-brand-red transition-colors-smooth">Depoimentos</a>
+                <a href="#area-atendimento" class="block font-bold hover:text-brand-red transition-colors-smooth">Área de Atendimento</a>
                 <a href="#sobre" class="block text-gray-700 hover:text-brand-red transition-colors-smooth py-2">Sobre</a>
 
             </div>
@@ -444,6 +444,63 @@
         </div>
     </section>
 
+    <section id="faq" class="bg-white py-16 border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-3xl">
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-black font-serif">
+                Perguntas Frequentes
+            </h2>
+
+            <div class="space-y-4">
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-gray-800 text-lg">Como funciona o atendimento em domicílio?</span>
+                        <i class="fas fa-chevron-down text-brand-red transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white px-6 py-4 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            Através dos nossos canais de atendimento (WhatsApp e telefone) é realizado um <strong>agendamento da visita do técnico</strong>.<br><br>
+                            Na data combinada, o técnico vai até o local solicitado e realiza um orçamento. Caso aprovado, é aberta uma ficha de atendimento para execução da manutenção do produto ali mesmo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-gray-800 text-lg">Quais regiões atendem?</span>
+                        <i class="fas fa-chevron-down text-brand-red transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white px-6 py-4 border-t border-gray-100">
+                        <p class="text-gray-600 mb-2">Atendemos toda a Grande São Paulo e Capital, incluindo:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+                            <li>Barueri</li>
+                            <li>Osasco</li>
+                            <li>Carapicuíba</li>
+                            <li>Santana de Parnaíba</li>
+                            <li>Cotia</li>
+                            <li>São Paulo (Todas as zonas)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-gray-800 text-lg">É cobrado taxa de visita?</span>
+                        <i class="fas fa-chevron-down text-brand-red transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden bg-white px-6 py-4 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            <strong>Não é cobrado taxa de visita.</strong><br>
+                            O orçamento realizado em domicílio é 100% gratuito e sem compromisso.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-black text-white py-12">
         <div class="container mx-auto px-4">
@@ -451,8 +508,8 @@
                 
                 <!-- Logo e Descrição -->
                 <div>
-                    <div class="text-2xl font-bold mb-4">
-                        Costura <span class="text-brand-red">SP</span>
+                    <div>
+                        <img src="./assets/iq-maq-logo-2.png" alt="Costura SP Logo" class="h-12 md:h-16">
                     </div>
                     <p class="text-gray-400 mb-4">
                         Especialistas em conserto de máquinas de costura em São Paulo. Atendimento profissional com mais de 20 anos de experiência.
@@ -473,7 +530,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope text-brand-red mr-3"></i>
-                            <span>contato@costurasp.com.br</span>
+                            <span>contato@igmaq.com.br</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-clock text-brand-red mr-3 mt-1"></i>
@@ -511,7 +568,7 @@
             
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Costura SP. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+                <p>&copy; 2024 IG Maquinas. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
             </div>
         </div>
     </footer>
@@ -584,6 +641,27 @@
                     const mensagem = `Olá! Gostaria de confirmar se atendem na região: ${encodeURIComponent(regiao)}`;
                     window.open(`https://wa.me/5511957778291?text=${mensagem}`, '_blank');
                 });
+            });
+        });
+        
+        // Lógica do FAQ (Accordion)
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // 1. Pegar o conteúdo (div irmã do botão)
+                const content = button.nextElementSibling;
+                
+                // 2. Pegar o ícone (dentro do botão)
+                const icon = button.querySelector('i');
+                
+                // 3. Alternar visibilidade do conteúdo
+                content.classList.toggle('hidden');
+                
+                // 4. Girar o ícone (Setinha para cima ou para baixo)
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('rotate-180');
+                } else {
+                    icon.classList.add('rotate-180');
+                }
             });
         });
     </script>
