@@ -73,3 +73,13 @@
         .rotate-180 {
             transform: rotate(180deg);
         }
+        /* Utilitário para esconder scrollbar mas manter funcionalidade */
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
